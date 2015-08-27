@@ -33,6 +33,7 @@ do
   # Prueba UNIX UDP
   ./runUNIX.sh $MAX_PACKS $amplificador $num_threads_per_socket $num_port $num_clients
 
+done
 # Limpiar
 echo "Limpiando..."
 make clean
