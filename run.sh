@@ -29,9 +29,21 @@ do
 
   # Prueba Internet UDP
   ./runInternet.sh $MAX_PACKS $amplificador $num_threads_per_socket $num_port $num_clients
+  echo "Rescatando Trazas..."
+  cat /sys/kernel/debug/tracing/trace > $salida"Internet.txt"
+  echo "Done"
+  # Limpiar pid
+  > /sys/kernel/debug/tracing/set_ftrace_pid
 
-  # Prueba UNIX UDP
-  ./runUNIX.sh $MAX_PACKS $amplificador $num_threads_per_socket $num_port $num_clients
+
+  # # Prueba UNIX UDP
+  # ./runUNIX.sh $MAX_PACKS $amplificador $num_threads_per_socket $num_port $num_clients
+  # echo "Rescatando Trazas..."
+  # cat /sys/kernel/debug/tracing/trace > $salida"UNIX.txt"
+  # echo "Done"
+  # # Limpiar pid
+  # > /sys/kernel/debug/tracing/set_ftrace_pid
+
 
 done
 # Limpiar
