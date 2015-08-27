@@ -5,7 +5,7 @@ MAX_PACKS=$1
 shift 1
 amplificador=$1
 shift 1
-threads=$1
+num_threads=$1
 shift 1
 num_port=$1
 shift 1

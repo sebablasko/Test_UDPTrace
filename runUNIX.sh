@@ -7,7 +7,7 @@ amplificador=$1
 shift 1
 threads=$1
 shift 1
-num_port=$1
+num_threads=$1
 shift 1
 num_clients=$1
 
