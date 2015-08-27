@@ -37,7 +37,7 @@ double segundos;
 char* schedu = "SO";
 int cpuAssign = 0;
 // variable de control
-int enabledTrace = 0;
+int enabledTrace = 1;
 
 //Variables para FTRACE
 int trace_fd = -1;
