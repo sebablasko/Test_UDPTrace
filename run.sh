@@ -7,7 +7,7 @@ total_num_threads_per_socket="1 2 4 8"
 num_clients=4
 
 # reglas Internet
-num_port=1820
+num_port=2820
 
 # Compilar
 echo "Compilando..."
