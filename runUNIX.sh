@@ -19,8 +19,8 @@ echo function_graph > /sys/kernel/debug/tracing/current_tracer
 
 
 # Lanzar Programa
-echo "Evaluación UNIX: ./unixUDPServerTesis --packets $MAX_PACKS --threads $num_threads --verbose&"
-./unixUDPServerTesis --packets $MAX_PACKS --threads $num_threads --verbose&
+echo "Evaluación UNIX: ./unixUDPServerTesis --packets $MAX_PACKS --threads $num_threads &"
+./unixUDPServerTesis --packets $MAX_PACKS --threads $num_threads&
 pid=$!
 sleep 1
 
