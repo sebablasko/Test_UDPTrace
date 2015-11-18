@@ -3,7 +3,7 @@
 # Reglas generales
 MAX_PACKS=1000000
 amplificador=10
-total_num_threads_per_socket="1 2 4 8"
+total_num_threads_per_socket="1 2 4 8 16 24 36 48 64 128"
 num_clients=4
 
 # reglas Internet
@@ -36,13 +36,13 @@ do
   > /sys/kernel/debug/tracing/set_ftrace_pid
 
 
-  # Prueba UNIX UDP
-  ./runUNIX.sh $MAX_PACKS $amplificador $num_threads_per_socket $num_port $num_clients
-  echo "Rescatando Trazas..."
-  cat /sys/kernel/debug/tracing/trace > $salida"UNIX.txt"
-  echo "Done"
-  # Limpiar pid
-  > /sys/kernel/debug/tracing/set_ftrace_pid
+  # # Prueba UNIX UDP
+  # ./runUNIX.sh $MAX_PACKS $amplificador $num_threads_per_socket $num_port $num_clients
+  # echo "Rescatando Trazas..."
+  # cat /sys/kernel/debug/tracing/trace > $salida"UNIX.txt"
+  # echo "Done"
+  # # Limpiar pid
+  # > /sys/kernel/debug/tracing/set_ftrace_pid
 
 
 done
